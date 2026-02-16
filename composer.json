@@ -1,0 +1,30 @@
+{
+  "name": "konthaina/khmer-time-format",
+  "description": "Format 12/24 hour time into Khmer (digits or words).",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Konthaina"
+    }
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "KhmerTimeFormat\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "KhmerTimeFormat\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
