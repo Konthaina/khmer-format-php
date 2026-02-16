@@ -83,6 +83,32 @@ final class KhmerMoneyFormatter
         return "{$sign}{$words} រៀល";
     }
 
+    public static function toKhmerWordsUSD(int|float|string $amount): string
+    {
+        $value = self::normalizeAmount($amount);
+        $rounded = round($value, 2, PHP_ROUND_HALF_UP);
+
+        $abs = abs($rounded);
+        $dollars = (int) floor($abs);
+        $cents = (int) round(($abs - $dollars) * 100, 0, PHP_ROUND_HALF_UP);
+
+        if ($cents === 100) {
+            $dollars += 1;
+            $cents = 0;
+        }
+
+        $words = self::integerToKhmerWords($dollars) . ' ដុល្លារ';
+        if ($cents > 0) {
+            $words .= ' និង ' . self::integerToKhmerWords($cents) . ' សេន';
+        }
+
+        if ($rounded < 0) {
+            return 'ដក ' . $words;
+        }
+
+        return $words;
+    }
+
     private static function normalizeAmount(int|float|string $amount): float
     {
         if (is_string($amount)) {

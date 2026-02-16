@@ -32,6 +32,16 @@ final class KhmerMoneyFormatterTest extends TestCase
         $this->assertSame('ដប់ប្រាំពាន់ រៀល', KhmerMoneyFormatter::toKhmerWordsKHR(15000));
     }
 
+    public function testToKhmerWordsUsdWholeAmount(): void
+    {
+        $this->assertSame('ដប់ប្រាំពាន់ ដុល្លារ', KhmerMoneyFormatter::toKhmerWordsUSD(15000));
+    }
+
+    public function testToKhmerWordsUsdWithCents(): void
+    {
+        $this->assertSame('មួយរយម្ភៃបី ដុល្លារ និង សែសិបប្រាំ សេន', KhmerMoneyFormatter::toKhmerWordsUSD(123.45));
+    }
+
     public function testFormatRoundsKhrToNoDecimals(): void
     {
         $this->assertSame('១៥,០០១ ៛', KhmerMoneyFormatter::formatKHR(15000.5));
