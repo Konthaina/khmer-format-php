@@ -1,7 +1,10 @@
 # khmer-format (PHP)
 
-Khmer formatting utilities.  
-Current feature: format `1:22 PM` / `13:22` time into Khmer.
+Khmer formatting utilities.
+
+Current features:
+- Time formatter: format `1:22 PM` / `13:22` time into Khmer.
+- Money formatter (`khmer-money`): format KHR and USD for Cambodia.
 
 - digits: `ម៉ោង១ និង ២២ នាទី រសៀល`
 - words: `ម៉ោងមួយ និង ម្ភៃពីរ នាទី រសៀល`
@@ -28,6 +31,24 @@ echo KhmerTimeFormatter::formatNow("words", "Asia/Phnom_Penh");
 
 `formatNow()` uses the current real system time.  
 Pass a timezone like `Asia/Phnom_Penh` when you need a specific timezone.
+
+## Money Usage (`khmer-money`)
+
+```php
+use KhmerTimeFormat\KhmerMoneyFormatter;
+
+echo KhmerMoneyFormatter::formatKHR(15000);              // ១៥,០០០ ៛
+echo KhmerMoneyFormatter::formatUSD(15000);              // $15,000.00
+echo KhmerMoneyFormatter::toKhmerWordsKHR(15000);        // ដប់ប្រាំពាន់ រៀល
+echo KhmerMoneyFormatter::format('KHR', 15000, false);   // 15,000 ៛
+```
+
+Features:
+- Format KHR properly (no decimals).
+- Format USD with 2 decimals.
+- Convert number to Khmer words currency.
+- Show symbols correctly (`៛`, `$`).
+- Thousands separator and grouped digits.
 
 ## Test
 

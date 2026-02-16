@@ -1,6 +1,6 @@
 {
   "name": "konthaina/khmer-format",
-  "description": "Khmer formatting utilities (currently time formats in digits or words).",
+  "description": "Khmer formatting utilities for time and money (digits or Khmer words).",
   "type": "library",
   "license": "MIT",
   "authors": [
