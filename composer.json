@@ -16,12 +16,12 @@
   },
   "autoload": {
     "psr-4": {
-      "KhmerTimeFormat\\": "src/"
+      "KhmerFormat\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "KhmerTimeFormat\\Tests\\": "tests/"
+      "KhmerFormat\\Tests\\": "tests/"
     }
   },
   "scripts": {

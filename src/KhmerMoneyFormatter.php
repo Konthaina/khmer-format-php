@@ -1,6 +1,6 @@
 <?php
 
-namespace KhmerTimeFormat;
+namespace KhmerFormat;
 
 final class KhmerMoneyFormatter
 {

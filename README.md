@@ -21,7 +21,7 @@ composer require konthaina/khmer-format
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use KhmerTimeFormat\KhmerTimeFormatter;
+use KhmerFormat\KhmerTimeFormatter;
 
 echo KhmerTimeFormatter::format("1:22 PM", "digits");
 echo KhmerTimeFormatter::format("13:22", "words");
@@ -35,7 +35,7 @@ Pass a timezone like `Asia/Phnom_Penh` when you need a specific timezone.
 ## Money Usage (`khmer-money`)
 
 ```php
-use KhmerTimeFormat\KhmerMoneyFormatter;
+use KhmerFormat\KhmerMoneyFormatter;
 
 echo KhmerMoneyFormatter::formatKHR(15000);              // ១៥,០០០ ៛
 echo KhmerMoneyFormatter::formatUSD(15000);              // $15,000.00

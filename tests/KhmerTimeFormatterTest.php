@@ -1,8 +1,8 @@
 <?php
 
-namespace KhmerTimeFormat\Tests;
+namespace KhmerFormat\Tests;
 
-use KhmerTimeFormat\KhmerTimeFormatter;
+use KhmerFormat\KhmerTimeFormatter;
 use PHPUnit\Framework\TestCase;
 
 final class KhmerTimeFormatterTest extends TestCase
