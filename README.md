@@ -1,6 +1,7 @@
-# khmer-time-format (PHP)
+# khmer-format (PHP)
 
-Format `1:22 PM` / `13:22` into Khmer.
+Khmer formatting utilities.  
+Current feature: format `1:22 PM` / `13:22` time into Khmer.
 
 - digits: `ម៉ោង១ និង ២២ នាទី រសៀល`
 - words: `ម៉ោងមួយ និង ម្ភៃពីរ នាទី រសៀល`
@@ -8,7 +9,7 @@ Format `1:22 PM` / `13:22` into Khmer.
 ## Install
 
 ```bash
-composer require konthaina/khmer-time-format
+composer require konthaina/khmer-format
 ```
 
 ## Usage

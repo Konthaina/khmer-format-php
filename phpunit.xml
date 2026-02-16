@@ -4,7 +4,7 @@
          bootstrap="vendor/autoload.php"
          colors="true">
   <testsuites>
-    <testsuite name="khmer-time-format">
+    <testsuite name="khmer-format">
       <directory>tests</directory>
     </testsuite>
   </testsuites>

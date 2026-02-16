@@ -1,6 +1,6 @@
 {
-  "name": "konthaina/khmer-time-format",
-  "description": "Format 12/24 hour time into Khmer (digits or words).",
+  "name": "konthaina/khmer-format",
+  "description": "Khmer formatting utilities (currently time formats in digits or words).",
   "type": "library",
   "license": "MIT",
   "authors": [
